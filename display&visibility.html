@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <style style="display:block;" contenteditable="">
+        .test-block {
+            display: block;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            border: 1px solid red;
+            text-align: center;
+            overflow: hidden;
+            transition: opacity .25s .25s;
+        }
+
+        .test-block:hover {
+            opacity: 0;
+            display: block;
+            visibility: visible;
+        }
+
+
+        .test-display-none {
+            display: none;
+        }
+
+        .test-visibility-hidden {
+            visibility: hidden;
+        }
+    </style>
+    <div class="test-block" onclick="alert()">
+        normal
+    </div>
+
+    <div class="test-block test-display-none" onclick="alert()">
+        display:none;
+    </div>
+
+    <div class="test-block test-visibility-hidden" onclick="alert()">
+        visibility:hidden;
+    </div>
+
+    <div hidden>
+        hidden HTML5 新增
+    </div>
+
+    <div>
+        <ol>
+            <li>a</li>
+            <li style="display:none;">b</li>
+            <li>c</li>
+        </ol>
+
+        <ol>
+            <li>a</li>
+            <li style="visibility: hidden;">b</li>
+            <li>c</li>
+        </ol>
+    </div>
+
+    <div>
+        <div class="test-visibility-hidden">
+            <!-- <img src="./src/img/avatar.JPG" /> -->
+            <div class="test-visibility-hidden">
+
+            </div>
+        </div>
+        <div class="test-display-none">
+            <div class="test-display-none" style="background-image: url(./src/img/avatar.JPG)">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
