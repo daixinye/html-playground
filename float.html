@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <!-- 父元素高度塌陷 -->
+    <div style="overflow: hidden;">
+        <div style="border:1px solid red;">
+            <img src="./src/img/avatar.JPG" alt="" style="float:left;width: 100px;height: 100px;">
+        </div>
+    </div>
+
+    <!-- 浮动元素宽度自适应 -->
+    <style>
+        .father {
+            width: 200px;
+        }
+
+        .float {
+            float: left;
+        }
+
+        .float img {
+            width: 128px;
+        }
+    </style>
+    <div style="overflow: hidden;">
+        <div class="father" style="border:10px solid green;">
+            <div class="float" style="border:1px solid red;">
+                <img src="./src/img/avatar.JPG" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- float 作用机制 -->
+    <style>
+        .animal {
+            margin-left: -100px;
+        }
+    </style>
+    <div style="overflow: hidden;">
+        <div class="father" style="border:1px solid red;">
+            <img src="./src/img/avatar.JPG" alt="" style="height: 100px;float:left;">
+        </div>
+        <p class="animal">cat cat cat cat cat cat cat cat cat cat cat cat cat</p>
+    </div>
+</body>
+
+</html>
