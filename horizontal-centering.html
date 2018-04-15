@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        div {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 宽度固定居中 -->
+    <div style="width:1000px;">
+        <div style="width:100px;margin:0 auto;">
+            content
+        </div>
+    </div>
+
+    <!-- 宽度固定 绝对定位 -->
+    <div style="position: relative;height: 100px;">
+        <div style="position: absolute;left:50%;margin-left:-50px;width:100px;">
+            content
+        </div>
+    </div>
+
+    <!-- 宽度不定，使用inline-block -->
+    <div style="width:1000px;text-align: center;">
+        <div style="display:inline-block;">
+            content
+        </div>
+    </div>
+
+    <!-- 宽度不定，使用flex-box -->
+    <div style="display:flex;justify-content: center;">
+        <div>
+            content
+        </div>
+    </div>
+</body>
+
+</html>
