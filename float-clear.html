@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- clear 清除浮动 -->
+    <div>
+        <div style="float:left;">float-left</div>
+        <div style="float:right;">float-right</div>
+        <div style="clear:both;">word word word word word word word word word word word word word word word word word word word word word word word
+            word word</div>
+    </div>
+
+    <!-- 父元素overflow hidden 创建BFC清除浮动 -->
+    <div>
+        <div style="overflow: hidden;">
+            <div style="float:left;">float-left</div>
+            <div style="float:right;">float-right</div>
+
+        </div>
+        <div>word word word word word word word word word word word word word word word word word word word word word word word
+            word word</div>
+    </div>
+
+    <!-- ::after伪元素 清除浮动 -->
+    <style type="text/css">
+        .wrapper::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+    <div>
+        <div class="wrapper">
+            <div style="float:left;">float-left</div>
+            <div style="float:right;">float-right</div>
+        </div>
+
+        <div>word word word word word word word word word word word word word word word word word word word word word word word
+            word word</div>
+    </div>
+</body>
+
+</html>
