@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="height: 200px;position: relative;">
+        <div style="width: 100px;height: 100px;border: 1px solid red;position: absolute;">
+            <div style="position: inherit;" onclick="alert(window.getComputedStyle(this).position)">inherit</div>
+            <div style="position: static;">!inherit</div>
+        </div>
+    </div>
+
+    <!-- 子元素相对父元素定位 -->
+    <div style="height: 200px;position: relative;">
+        <div style="position: relative;height: 200px;">
+            <div style="position: absolute;bottom: -10px;">content</div>
+        </div>
+    </div>
+</body>
+
+</html>
