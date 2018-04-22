@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+    </style>
+</head>
+
+<body>
+    <!-- 两列自适应布局：BFC -->
+    <style>
+        .layout-1 {
+            overflow: hidden;
+        }
+
+        .layout-1 .fixed {
+            width: 200px;
+            float: left;
+            background: red;
+        }
+
+        .layout-1 .auto {
+            overflow: hidden;
+            background: blue;
+        }
+    </style>
+    <div class="layout-1">
+        <div class="fixed">
+            左固定
+            <br /> 左固定
+        </div>
+        <div class="auto">
+            右自动右自动右自动右自动右自动右自动右自动右自动右自动
+            <br />右自动
+            <br />右自动
+            <br />右自动
+        </div>
+    </div>
+    <!--  两列自适应布局：负margin -->
+    <style>
+        .layout-2 {
+            overflow: hidden;
+        }
+
+        .layout-2 .fixed {
+            float: left;
+            width: 200px;
+            margin-right: -200px;
+            background: red;
+        }
+
+        .layout-2 .auto {
+            margin-left: 200px;
+            background: blue;
+        }
+    </style>
+
+    <div class="layout-2">
+        <div class="fixed">
+            左固定
+            <br /> 左固定
+        </div>
+        <div class="auto">
+            右自动1右自动2右自动3右自动4右自动5右自动6右自动7右自动8右自动
+            <br />右自动
+            <br />右自动
+            <br />右自动
+        </div>
+
+    </div>
+</body>
+
+</html>

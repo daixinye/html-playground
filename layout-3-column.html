@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 三列自适应布局 -->
+    <style type="text/css">
+        .layout-1 {
+            overflow: auto;
+        }
+
+        .layout-1 .left {
+            background: red;
+            float: left;
+            width: 200px;
+            position: relative;
+        }
+
+        .layout-1 .auto {
+            background: blue;
+            float: left;
+            width: 100%;
+            margin: 0 -200px;
+        }
+
+        .layout-1 .right {
+            background: green;
+            float: right;
+            width: 200px;
+        }
+    </style>
+    <div class="layout-1">
+        <div class="left">
+            左固定
+        </div>
+        <div class="auto">
+            <div style="padding:0 200px;">
+                中自动
+                <br /> 中自动
+                <br /> 中自动
+                <br /> 中自动
+                <br /> 中自动
+
+            </div>
+        </div>
+        <div class="right">
+            右固定
+        </div>
+    </div>
+</body>
+
+</html>
