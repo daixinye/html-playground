@@ -42,6 +42,32 @@
             <p>p</p>
         </div>
     </div>
+
+    <!-- 伪元素 hover -->
+    <div>
+        <style type="text/css">
+            #pesudo-elements-and-pesudo-classes::before {
+                color: green;
+                content: "before";
+            }
+
+            #pesudo-elements-and-pesudo-classes:hover::before {
+                color: red;
+            }
+
+            #pesudo-elements-and-pesudo-classes::after{
+                color: red;
+                content: "after";
+            }
+
+            #pesudo-elements-and-pesudo-classes:hover::after {
+                color: green;
+            }
+        </style>
+        <div id="pesudo-elements-and-pesudo-classes">
+            content
+        </div>
+    </div>
 </body>
 
 </html>
