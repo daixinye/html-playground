@@ -2,7 +2,7 @@
 一些 HTML&CSS 的小练习。
 
 ## HTML
-
+- [HTML中引入外部JavaScript，defer](./html-js-defer.html)
 - [a URL](./URL.html)
 
 ## CSS
